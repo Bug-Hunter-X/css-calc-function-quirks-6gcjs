@@ -1,0 +1,9 @@
+The solution is to ensure consistency in units within the `calc()` function and to always include spaces between operators and operands.
+
+```css
+.element {
+  width: calc(100% - 20px);
+}
+```
+
+This corrected version provides the expected width.  It's crucial to double-check all `calc()` expressions to prevent such subtle bugs.  For more complex calculations, it might be beneficial to break them down into smaller, more manageable parts to enhance readability and reduce the chance of errors.
