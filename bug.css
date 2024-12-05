@@ -1,0 +1,15 @@
+The CSS property `calc()` is used to perform calculations within CSS, but it can sometimes lead to unexpected results or errors if not used correctly. For example, using `calc()` with units inconsistently or forgetting to use spaces between operators and values can cause issues. Another potential problem is using `calc()` with complex calculations that the browser may not be able to parse efficiently.  Here's an example of a faulty calculation:
+
+```css
+.element {width:calc(100% - 20px);}
+```
+
+This works fine, but if we introduce an inconsistency in units or remove the space before the minus sign:
+
+```css
+.element {width:calc(100%-20px);}
+/*OR*/
+.element {width:calc(100px - 20%);}
+```
+
+It will likely produce unexpected results, potentially rendering the element incorrectly.  In some cases, the browser may simply ignore the calculation, defaulting to the element's usual width properties.
